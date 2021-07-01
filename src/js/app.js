@@ -40,25 +40,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const fillTable = filmList.fillTable.bind(filmList);
   fillTable();
 });
-
-  const filmList = new FilmList(`[
-    {
-      "id": 4,
-      "title": "Лупа и Пупа",
-      "imdb": 9.30,
-      "year": 2000
-    },
-    {
-      "id": 1,
-      "title": "Буба и Биба",
-      "imdb": 9.20,
-      "year": 1950
-    },
-    {
-      "id": 10,
-      "title": "Шлепа и Флоппа",
-      "imdb": 10.00,
-      "year": 2010
-    },
-    ]`);
-    console.log(filmList)
