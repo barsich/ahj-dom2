@@ -4,7 +4,7 @@ export default class FilmList {
     try {
       this.list = JSON.parse(list);
     } catch (e) {
-      console.error('Невалидный список');
+      throw new Error('Невалидный список');
     }
     this.propList = ['id', 'title', 'year', 'imdb'];
   }
@@ -46,8 +46,7 @@ export default class FilmList {
 
   fillTable() {
     if (this.list === undefined) {
-      console.error('Отсутствует список фильмов');
-      return;
+      throw new Error('Отсутствует список фильмов');
     }
 
     // создание таблицы
